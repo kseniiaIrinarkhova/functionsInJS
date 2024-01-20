@@ -89,7 +89,7 @@ let input = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id:
 
 // Use callback functions alongside Array methods to accomplish the following:
 
-// Filter the array to remove entries with an age greater than 50.
+
 // Map the array to change the “occupation” key to “job” and increment every age by 1.
 // Use the reduce method to calculate the sum of the ages.
 // Then use the result to calculate the average age.
@@ -106,3 +106,8 @@ console.log(input);
 input.sort((x,y) => x.age - y.age);
 console.log("\n Sorted:")
 console.log(input);
+
+// Filter the array to remove entries with an age greater than 50.
+let filteredArray = input.filter((x) => x.age <= 50); 
+console.log("\n Filtered:")
+console.log(filteredArray);
