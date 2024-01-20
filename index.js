@@ -15,6 +15,16 @@ function getAverageNumber(numArray){
     return sum/numArray.length //calculate the average number and return it
 }
 // Take an array of strings and return the longest string.
+function getLongestWord(stringArray){
+    let word = '';
+    //take each element in stringArray
+    stringArray.forEach(element => {
+        //check if length of word less than element - assign element to word
+        // otherwise live it as it is, it's a longest word
+        word.length < element.length ? word = element : word = word;
+    });
+    return word;
+}
 // Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
 // For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
@@ -36,4 +46,13 @@ console.log(`function output: ${sum}`);
 console.log("\nFunction for getting average number");
 let averageNumber = getAverageNumber(nums);
 console.log(`function output: ${averageNumber}`);
+console.log("\n");
 
+//declare array with strings
+let words = ['say', 'hello', 'in', 'the', 'morning'];
+console.log(`input: words = ${words}`);
+
+//call getLongestString() function
+console.log("\nFunction for getting longest string");
+let longestWord = getLongestWord(words);
+console.log(`function output: ${longestWord}`);
