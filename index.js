@@ -89,7 +89,7 @@ let input = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id:
 
 // Use callback functions alongside Array methods to accomplish the following:
 
-// Then use the result to calculate the average age.
+
 
 /**************************************************************************************** */
 console.log(`
@@ -125,3 +125,5 @@ console.log(mappedArray);
 let ages = input.reduce((sum, person) => sum + Number(person.age), 0);
 console.log("\n Sum of ages in initial array:");
 console.log(ages);
+// Then use the result to calculate the average age.
+console.log(`Average age: ${ages/input.length}`);
