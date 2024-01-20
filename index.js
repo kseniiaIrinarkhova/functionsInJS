@@ -27,6 +27,15 @@ function getLongestWord(stringArray){
 }
 // Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
 // For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+function getStringsLongerThan(stringArray, lengthLimit){
+    let filteredArray = []; //declare new array to avoid changes in input parameter
+    stringArray.forEach(element =>{
+        if (element.length > lengthLimit){
+            filteredArray.push(element) //add only elements that length greater than lengthLimit
+        };
+    });
+    return filteredArray;
+}
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
 
 console.log(`
@@ -45,8 +54,7 @@ console.log(`function output: ${sum}`);
 //call the getAverageNumber() function
 console.log("\nFunction for getting average number");
 let averageNumber = getAverageNumber(nums);
-console.log(`function output: ${averageNumber}`);
-console.log("\n");
+console.log(`function output: ${averageNumber}\n`);
 
 //declare array with strings
 let words = ['say', 'hello', 'in', 'the', 'morning'];
@@ -56,3 +64,9 @@ console.log(`input: words = ${words}`);
 console.log("\nFunction for getting longest string");
 let longestWord = getLongestWord(words);
 console.log(`function output: ${longestWord}`);
+
+//call getStringsLongerThan() function
+const n = 3;
+console.log(`\nFunction for getting strings longer than n = ${n}`);
+let filteredWords = getStringsLongerThan(words,n);
+console.log(`function output: ${filteredWords}`);
