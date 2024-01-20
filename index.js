@@ -37,7 +37,15 @@ function getStringsLongerThan(stringArray, lengthLimit){
     return filteredArray;
 }
 // Take a number, n, and print every number between 1 and n without using loops. Use recursion.
+function printAllNumbetsBetween(number){
+    if(number == 1){ console.log(number)} //the bottom of recursion. start point of out output
+    else{
+        printAllNumbetsBetween(number-1); //call function for less value. recursion
+        console.log(number); //log all numbers recursively
+    }
+}
 
+/********************************************************************************************* */
 console.log(`
 ***********************************
 ******Part 1 **********************
@@ -66,7 +74,12 @@ let longestWord = getLongestWord(words);
 console.log(`function output: ${longestWord}`);
 
 //call getStringsLongerThan() function
-const n = 3;
+let n = 3;
 console.log(`\nFunction for getting strings longer than n = ${n}`);
 let filteredWords = getStringsLongerThan(words,n);
-console.log(`function output: ${filteredWords}`);
+console.log(`function output: ${filteredWords}\n`);
+
+//call recursion function
+n = 15;
+console.log(`\nRecursively output all numbers between 1 and n = ${n}`);
+printAllNumbetsBetween(n);
