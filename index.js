@@ -83,3 +83,21 @@ console.log(`function output: ${filteredWords}\n`);
 n = 15;
 console.log(`\nRecursively output all numbers between 1 and n = ${n}`);
 printAllNumbetsBetween(n);
+
+/**Part 2: Thinking Methodically */
+let input = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }];
+
+// Use callback functions alongside Array methods to accomplish the following:
+// Sort the array by age.
+// Filter the array to remove entries with an age greater than 50.
+// Map the array to change the “occupation” key to “job” and increment every age by 1.
+// Use the reduce method to calculate the sum of the ages.
+// Then use the result to calculate the average age.
+
+/**************************************************************************************** */
+console.log(`
+***********************************
+******Part 1 **********************
+***********************************`);
+console.log('Input:');
+console.log(input);
