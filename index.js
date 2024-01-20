@@ -94,7 +94,7 @@ let input = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id:
 /**************************************************************************************** */
 console.log(`
 ***********************************
-******Part 1 **********************
+******Part 2 **********************
 ***********************************`);
 console.log('Input:');
 console.log(input);
@@ -131,6 +131,23 @@ console.log(`Average age: ${ages/input.length}`);
 /**Part 3: Thinking Critically */
 // For this section, develop functions that accomplish the following:
 // Take an object and increment its age field.
+function changeAge(persons){
+persons.forEach((person) =>{ person.age++})
+return persons;
+}
 // Take an object, make a copy, and increment the age field of the copy.Return the copy.
 
 // For each of the functions above, add(or modify, as appropriate) an updated_at field that stores a Date object with the current time.
+console.log(`
+***********************************
+******Part 2 **********************
+***********************************
+
+Input:`);
+console.log(input);
+let outputLinked = changeAge(input);
+console.log('After calling ChangeAge function:');
+console.log("Sourse object (input) :" );
+console.log(input);
+console.log("CHanged object:");
+console.log(outputLinked);
