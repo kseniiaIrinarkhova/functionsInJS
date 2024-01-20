@@ -88,7 +88,7 @@ printAllNumbetsBetween(n);
 let input = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" }, { id: "48", name: "Barry", occupation: "Runner", age: "25" }, { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" }, { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" }, { id: "7", name: "Bilbo", occupation: "None", age: "111" }];
 
 // Use callback functions alongside Array methods to accomplish the following:
-// Use the reduce method to calculate the sum of the ages.
+
 // Then use the result to calculate the average age.
 
 /**************************************************************************************** */
@@ -115,8 +115,13 @@ let mappedArray = input.map((element) => {
         id : element.id,
         name : element.name,
         job : element.occupation,
-        age : ++element.age
+        age: Number(element.age)  + 1
     }
 })
 console.log("\n Mapped:")
 console.log(mappedArray);
+
+// Use the reduce method to calculate the sum of the ages.
+let ages = input.reduce((sum, person) => sum + Number(person.age), 0);
+console.log("\n Sum of ages in initial array:");
+console.log(ages);
