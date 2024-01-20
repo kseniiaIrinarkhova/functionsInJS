@@ -132,7 +132,10 @@ console.log(`Average age: ${ages / input.length}`);
 // For this section, develop functions that accomplish the following:
 // Take an object and increment its age field.
 function changeAge(persons) {
-    persons.forEach((person) => { person.age++ })
+    persons.forEach((person) => {
+        person.age++;
+        person.updated_at = new Date().toLocaleDateString() //added new property
+    })
     return persons;
 }
 // Take an object, make a copy, and increment the age field of the copy.Return the copy.
@@ -142,7 +145,8 @@ function getListwithChangedAge(persons) {
             id: person.id,
             name: person.name,
             occupation: person.occupation,
-            age: Number(person.age) + 1
+            age: Number(person.age) + 1,
+            updated_at: new Date().toJSON() //added like this to see the time and differences
         }
     });
 
