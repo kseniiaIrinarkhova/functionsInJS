@@ -127,3 +127,10 @@ console.log("\n Sum of ages in initial array:");
 console.log(ages);
 // Then use the result to calculate the average age.
 console.log(`Average age: ${ages/input.length}`);
+
+/**Part 3: Thinking Critically */
+// For this section, develop functions that accomplish the following:
+// Take an object and increment its age field.
+// Take an object, make a copy, and increment the age field of the copy.Return the copy.
+
+// For each of the functions above, add(or modify, as appropriate) an updated_at field that stores a Date object with the current time.
